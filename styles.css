@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .navbar {
+    background: transparent;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+  
+  .navbar_container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+  }
+  
+  #logo {
+    background-color: #fff;
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+  }
+  
+  body {
+    background: rgb(199,0,255,1);
+    background: linear-gradient(90deg, rgba(199,0,255,1) 0%, rgba(181,29,169,1) 50%, rgba(199,0,255,1) 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .wrapper {
+    width: 20%;
+    float: left;
+    margin-left: 40px;
+    box-shadow: 0 6px 7px -4px rgba(0, 0, 0, 0.2);
+    /*Put margin: here for moving*/
+  }
+  
+  .select-btn, .options li {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+  }
+  
+  .select-btn {
+    background: #fff;
+    height: 65px;
+    padding: 0 20px;
+    border-radius: 7px;
+    font-size: 22px;
+    justify-content: space-between;
+  }
+
+  .go {
+    background: #fc6ff5;
+    line-height: 65px;
+    border-radius: 7px;
+    margin-top: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .go:hover {
+    background: #d43acd;
+    transition: all 0.3s ease;
+  }
+
+  #go-btn {
+    background-color: #fff;
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 22px;
+    display: block;
+    font-weight: 500;
+  }
+  
+  .select-btn i {
+    font-size: 31px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .wrapper.active .select-btn i {
+    transform: rotate(-180deg);
+  }
+
+  .wrapper.active .go {
+    display: none;
+  }
+  
+  .content {
+    display: none;
+    background: #fff;
+    margin-top: 15px;
+    padding: 20px;
+    border-radius: 7px;
+  }
+  
+  .wrapper.active .content {
+    display: block;
+  }
+  
+  .content .search {
+    position: relative;
+  }
+  
+  .search i {
+    position: absolute;
+    left: 15px;
+    line-height: 52px;
+    font-size: 20px;
+    color: #999;
+  }
+  
+  .search input {
+    height: 53px;
+    width: 100%;
+    font-size: 17px;
+    padding: 0 15px 0 43px;
+    border: 1px solid #b3b3b3;
+    outline: none;
+    border-radius: 5px;
+  }
+  
+  .content .options {
+    margin-top: 10px;
+    max-height: 250px;
+    overflow-y: auto;
+    padding-right: 7px;
+  }
+  
+  .options::-webkit-scrollbar {
+    width: 7px;
+  }
+  
+  .options::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 25px;
+  }
+  
+  .options::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 25px;
+  }
+  
+  .options li {
+    height: 50px;
+    padding: 0 13px;
+    border-radius: 5px;
+    font-size: 21px;
+  }
+  
+  .options li:hover, li.selected {
+    background: #f2f2f2;
+  }
+
+  .charts-card {
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 25px;
+    box-sizing: border-box;
+    -webkit-column-break-inside: avoid;
+    border-radius: 5px;
+    box-shadow: 0 6px 7px -4px rgba(0, 0, 0, 0.2);
+    
+    margin-right: 40px;
+    width: 75%;
+    height: 433px;
+    float: right;
+  }
+  
+  .chart-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
